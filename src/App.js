@@ -32,7 +32,7 @@ function App() {
     // F = C*9/5 + 32
     let FTemp = 0;
     let CTemp = 0;
-    console.log(weatherData.temperature, type);
+    // console.log(weatherData.temperature, type);
     if (weatherData.temperature) {
       if (type === "C") {
         CTemp = ((weatherData.temperature * 9) / 5 + 32).toFixed(0);
