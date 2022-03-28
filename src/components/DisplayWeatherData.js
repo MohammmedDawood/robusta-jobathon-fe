@@ -13,7 +13,7 @@ const DisplayWeatherData = ({
   img,
 }) => {
   return (
-    <div className="container expand-lg bg-transparent mt-md-5 text-white border border-secondary rounded ">
+    <div className="container expand-lg bg-transparent mt-md-5 text-white  ">
       <div className="row mt-md-5 mb-md-5">
         <div className="col-md-8  mr-2">
           <h1>{location}</h1>
@@ -27,11 +27,11 @@ const DisplayWeatherData = ({
           </p>
         </div>
         <div className="col-md-4">
-          <h1>
+          <h1 className="temp-degree">
             {temperature}
             <sup>o</sup>
           </h1>
-          {description}
+          <p className="text-summary">{description}</p>
         </div>
       </div>
       <div className="row mt-5 mb-5">

@@ -14,20 +14,20 @@ const Header = ({ currenttemp, convertWeatherData }) => {
       </div>
       <div className="col-md-4 ">
         <button
-          className="bg-transparent text-white  mt-5 mb-5"
-          onClick={handleKeyPress}
-          value={"F"}
-        >
-          F
-        </button>
-        |
-        <button
           type="button"
           className="bg-transparent text-white  mt-5 mb-5"
           onClick={handleKeyPress}
           value={"C"}
         >
           C
+        </button>{" "}
+        |
+        <button
+          className="bg-transparent text-white  mt-5 mb-5"
+          onClick={handleKeyPress}
+          value={"F"}
+        >
+          F
         </button>
       </div>
     </div>

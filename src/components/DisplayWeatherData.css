@@ -1,20 +1,35 @@
-.wind::after{
-    content:'(km/hr)';
-    font-size: 20px;
+.wind::after {
+  content: "(km/hr)";
+  font-size: 20px;
 }
-.pressure::after{
-    content:' (milibar)';
-    font-size: 20px;
+.pressure::after {
+  content: " (milibar)";
+  font-size: 20px;
 }
-.precipitation::after{
-    content:' (mm)';
-    font-size: 20px;
+.precipitation::after {
+  content: " (mm)";
+  font-size: 20px;
 }
-.humidity::after{
-    content:' (%)';
-    font-size: 20px;
+.humidity::after {
+  content: " (%)";
+  font-size: 20px;
 }
-.weather-info h3,.weather-info h2{
-    text-align:center;
+.weather-info h3,
+.weather-info h2 {
+  text-align: center;
 }
 
+.temp-degree {
+  font-weight: 700;
+  font-size: 144px;
+  line-height: 169px;
+  /* identical to box height */
+
+  letter-spacing: 0.05em;
+}
+.text-summary {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+}
