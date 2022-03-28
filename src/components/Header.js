@@ -1,11 +1,10 @@
 import React from "react";
 
-const Header = ({ getWeatherData }) => {
+const Header = ({ currenttemp, convertWeatherData }) => {
   const handleKeyPress = (e) => {
     console.log(e.target.value);
-    if (e.key === "Enter") {
-      return getWeatherData("", "", "", e.target.value);
-    }
+
+    return convertWeatherData(currenttemp, e.target.value);
   };
 
   return (

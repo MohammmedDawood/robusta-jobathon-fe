@@ -27,7 +27,26 @@ function App() {
       getWeatherData(location.latitude, location.longitude, "");
     }
   }, []);
-
+  const convertWeatherData = (value, type = "C") => {
+    // C = (F − 32) × 5/9
+    // F = C*9/5 + 32
+    let FTemp = 0;
+    let CTemp = 0;
+    console.log(weatherData.temperature, type);
+    if (weatherData.temperature) {
+      if (type === "C") {
+        CTemp = ((weatherData.temperature * 9) / 5 + 32).toFixed(0);
+        setWeatherData({ ...weatherData, temperature: CTemp });
+      } else {
+        FTemp = ((weatherData.temperature - 32) * (5 / 9)).toFixed(0);
+        setWeatherData({ ...weatherData, temperature: FTemp });
+      }
+    } else {
+      CTemp = null;
+      FTemp = null;
+    }
+    // setWeatherData({...weatherData,temperature: CTemp, FTemp});
+  };
   const getWeatherData = async (latitude, longitude, city) => {
     try {
       const res = await axios.get(
@@ -65,7 +84,10 @@ function App() {
 
   return (
     <div className="container ">
-      <Header getWeatherData={getWeatherData} />
+      <Header
+        currenttemp={weatherData.temperature}
+        convertWeatherData={convertWeatherData}
+      />
       <DisplayWeatherData {...weatherData} />
     </div>
   );
